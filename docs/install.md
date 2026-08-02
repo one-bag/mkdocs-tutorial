@@ -41,7 +41,13 @@ tutorial goes. Type the command, press ++enter++, wait for it to finish.
 
 If you see something like `Python 3.12.2`, you are set. Skip to step 4.
 
-If you see an error, or a version starting with `2.`, install Python first.
+If you see an error, or a version below `3.10`, install Python first.
+
+!!! info "Why 3.10 and not something older"
+    MkDocs itself is happy on Python 3.8. The number is set by the optional
+    plugins later on: the one in [step 9](plugins.md) needs 3.10, and the
+    Jupyter one in [step 11](notebooks.md) needs 3.9. Installing 3.10 or newer
+    now means nothing stops later.
 
 ## Step 3: install Python (only if step 2 failed)
 

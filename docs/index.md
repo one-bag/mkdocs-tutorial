@@ -25,7 +25,7 @@ is spelled out, including which buttons to click.
 | You need | Why | Cost |
 | --- | --- | --- |
 | A computer with Windows, macOS or Linux | To write and preview the site | Free |
-| Python 3.9 or newer | MkDocs is a Python program | Free |
+| Python 3.10 or newer | MkDocs is a Python program | Free |
 | A text editor | To write your pages. [Step 2](install.md#step-8-get-a-text-editor) recommends one | Free |
 | A GitHub account | To store the files and host the website | Free |
 | An afternoon | Realistically, 2 to 4 hours if all of this is new | Free |

@@ -3,6 +3,29 @@
 Your content is written in Markdown. It is plain text with a handful of
 symbols, and you can learn the useful half in five minutes.
 
+## Before you start: three lines to add
+
+Most of Markdown works out of the box. Three of the things on this page do not,
+because they are additions rather than part of the original language. Add them
+now so that everything you try below actually happens.
+
+Open `mkdocs.yml`, put this at the bottom, and save:
+
+```yaml title="mkdocs.yml"
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.tilde
+```
+
+That is the whole preparation. [Step 5](configuration.md) explains what that
+section is and what else can go in it.
+
+!!! note "If you skip this"
+    Nothing breaks, but three things on this page will appear on your site as
+    the raw symbols you typed rather than as the result shown here. If that
+    happens, you are looking at the reason.
+
 ## Markdown in five minutes
 
 Keep `mkdocs serve` running while you read this and try things in
@@ -28,10 +51,8 @@ and everything below it turns into the table of contents on the right.
 | `` `some_command` `` | `some_command` |
 | `~~no longer true~~` | ~~no longer true~~ |
 
-Strikethrough is the one exception in that table: it only works once
-`pymdownx.tilde` is listed under `markdown_extensions` in `mkdocs.yml`. It is
-already in the example configuration you will copy in
-[step 5](configuration.md#a-complete-file-to-copy).
+The last one, strikethrough, is one of the three that needed `pymdownx.tilde`
+adding above.
 
 ### Lists
 
@@ -122,22 +143,10 @@ The columns do not need to line up in your text file. Only the pipes matter.
 These are called admonitions, and they are the fastest way to make a page look
 organised.
 
-!!! warning "Switch these two on first"
-    Unlike everything above, coloured boxes are not part of plain Markdown. Try
-    one right now and the page will show your text exactly as you typed it,
-    `!!!` and all.
-
-    Open `mkdocs.yml`, add these three lines at the bottom, and save:
-
-    ```yaml title="mkdocs.yml"
-    markdown_extensions:
-      - admonition
-      - pymdownx.details
-    ```
-
-    [Step 5](configuration.md) explains what that section is. The boxes work
-    straight away, and they get their colours once you switch to the Material
-    theme in [step 6](theme.md).
+They are the other two things that needed the lines you added at the top of
+this page: `admonition` for the boxes, `pymdownx.details` for the foldable
+version. They work as soon as those are in place, and they get their colours
+when you switch to the Material theme in [step 6](theme.md).
 
 ```markdown
 !!! note "Optional title"

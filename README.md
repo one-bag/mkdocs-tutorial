@@ -54,9 +54,32 @@ instead of the `source` line.
 .
 ├── .github/workflows/deploy.yml   Builds and publishes the site on every push
 ├── mkdocs.yml                     Site configuration
-├── requirements.txt               Pinned versions of MkDocs and the theme
+├── requirements.txt               Pinned versions of MkDocs, the theme and the plugins
+├── tools/check_tutorial.py        Checks the tutorial against a reader's own setup
 └── docs/                          The tutorial itself, one Markdown file per page
 ```
+
+## The check that keeps it honest
+
+The way a tutorial like this fails is not by being too complicated. It fails by
+showing a result the reader cannot reproduce, because the page needs
+configuration they have not been given yet. It looks right here, where the
+configuration is finished, and produces raw symbols on their screen. Someone
+new cannot tell that apart from a mistake of their own, so it stops them.
+
+`tools/check_tutorial.py` looks for exactly that, by rendering rather than by
+reading. For every snippet the tutorial teaches, it renders it twice: once with
+this site's configuration, and once with the configuration the reader actually
+has at that point in the tutorial. Any difference is a promise the reader
+cannot keep. It also checks that everything still works with the complete
+`mkdocs.yml` handed out in step 5, and that the Python version the tutorial
+asks for is high enough for every package it later tells you to install.
+
+```bash
+python3 tools/check_tutorial.py
+```
+
+It runs on every push, before the site is built.
 
 ## Contributing
 

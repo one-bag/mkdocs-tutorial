@@ -40,6 +40,11 @@ jobs:
       - name: Install MkDocs
         run: pip install -r requirements.txt
 
+      # Catches the tutorial promising something the reader's own setup will
+      # not do yet. See tools/check_tutorial.py for what that means.
+      - name: Check the tutorial against the reader's setup
+        run: python3 tools/check_tutorial.py
+
       - name: Build the site
         run: mkdocs build --strict
 

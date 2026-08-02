@@ -89,6 +89,12 @@ Two more worth knowing once your site grows past a dozen pages:
 `navigation.sections` shows sections as groups in the sidebar instead of
 folding menus.
 
+!!! warning "A misspelt feature is ignored without a word"
+    Write `navigation.foter` and the build succeeds, says nothing, and the
+    feature simply does not happen. Nothing checks these names for you, not
+    even `mkdocs build --strict`. So if a feature you switched on has no
+    effect, suspect the spelling before you suspect anything else.
+
 ## Add a logo and a favicon
 
 Put your image files in `docs/assets/` and point at them:
