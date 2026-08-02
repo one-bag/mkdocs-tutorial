@@ -33,6 +33,8 @@ free. That is what [step 8](publish.md) uses.
 
 ## Create the repository
 
+![Diagram of the GitHub new repository form, showing the owner and repository name fields, the Public option selected, and the three initialisation checkboxes left empty](assets/github-new-repo.svg)
+
 1. Once logged in, click the **+** in the top right corner, then
    **New repository**.
 2. **Repository name:** `my-docs`. Lowercase, no spaces, hyphens instead.
@@ -163,6 +165,13 @@ my-docs/
 ```
 
 Small, readable, all text. That is exactly right.
+
+On GitHub it looks like this, which is the repository for this very tutorial:
+
+![The file list of a GitHub repository, showing a docs folder, a .github/workflows folder, and the files .gitignore, LICENSE, README.md and mkdocs.yml, with the most recent commit message beside each one](assets/github-repo-contents.png)
+
+Each row is a file or folder, with the message from the last commit that
+touched it. If yours looks roughly like that, you are done here.
 
 ## If something goes wrong
 

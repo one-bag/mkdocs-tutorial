@@ -9,6 +9,11 @@ This repository is both the tutorial and a working example of what it teaches.
 Everything the guide describes is used here, so you can open any file and see
 the real thing.
 
+**In a hurry?**
+[Publish without installing anything](https://one-bag.github.io/mkdocs-tutorial/quick-start/)
+gets a real site online in about fifteen minutes using nothing but a web
+browser. No Python, no terminal.
+
 ## What the tutorial covers
 
 1. What MkDocs is, and the vocabulary you need
@@ -23,7 +28,8 @@ the real thing.
 10. Customising the theme with your own CSS, starting from no CSS at all
 11. Publishing Jupyter notebooks as pages, with their outputs and charts
 
-Plus a troubleshooting page with the errors people actually hit, and a one page
+Plus a browser-only shortcut for people who would rather not install anything,
+a troubleshooting page with the errors people actually hit, and a one page
 cheat sheet.
 
 ## Run this site on your own computer

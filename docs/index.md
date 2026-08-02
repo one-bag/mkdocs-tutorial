@@ -26,10 +26,28 @@ is spelled out, including which buttons to click.
 | --- | --- | --- |
 | A computer with Windows, macOS or Linux | To write and preview the site | Free |
 | Python 3.9 or newer | MkDocs is a Python program | Free |
+| A text editor | To write your pages. [Step 2](install.md#step-8-get-a-text-editor) recommends one | Free |
 | A GitHub account | To store the files and host the website | Free |
-| About one hour | To go through the whole tutorial calmly | Free |
+| An afternoon | Realistically, 2 to 4 hours if all of this is new | Free |
 
 That is all. No web design, no servers, no credit card.
+
+## How long it takes
+
+The whole tutorial is around 13,000 words, so an hour of reading before you
+touch anything. Doing it as you go, from a standing start:
+
+| Part | What you get out of it | Roughly |
+| --- | --- | --- |
+| Steps 1 to 3 | MkDocs installed, a site running on your own screen | 45 to 60 minutes |
+| Steps 4 to 6 | Your own pages, your own menu, a theme that looks good | 45 minutes |
+| Steps 7 and 8 | The site on GitHub and live on the internet | 45 to 60 minutes |
+| Steps 9 to 11 | Optional extras, dip in when you want one | as long as you like |
+
+!!! tip "In a hurry, or stuck on the terminal?"
+    There is a shortcut. [Publish without installing anything](quick-start.md)
+    gets a real site online in about fifteen minutes using nothing but your
+    web browser, and you can come back and do it properly afterwards.
 
 ## How the tutorial is organised
 

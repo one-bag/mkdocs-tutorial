@@ -43,6 +43,12 @@ INFO    -  [12:00:00] Serving on http://127.0.0.1:8000/
 Open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser. Your
 website is there.
 
+![The starter MkDocs site in a browser, showing the default blue theme, a Welcome to MkDocs heading, a sidebar with three links, and a list of the mkdocs commands](assets/first-site-preview.png)
+
+That is what you should see: the placeholder content MkDocs writes for you, in
+its plain default theme. It looks nothing like this tutorial yet, and that is
+expected. The theme arrives in [step 6](theme.md).
+
 !!! info "What that address means"
     `127.0.0.1` is your own computer talking to itself. The site is running
     only for you, on your machine. Nobody else can reach it, and it disappears

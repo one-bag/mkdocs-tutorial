@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 430" width="860" height="430" role="img" aria-label="Diagram of the GitHub new repository form, showing the owner and name fields, the Public option selected, and the Add a README checkbox left unticked">
+  <style>
+    .bg    { fill: #ffffff; }
+    .field { fill: #ffffff; stroke: #8c959f; stroke-width: 1.5; }
+    .btn     { fill: #1f883d; }
+    .btntext { fill: #ffffff; }
+    .t     { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #1f2328; }
+    .muted { fill: #59636e; }
+    .h     { font-size: 21px; font-weight: 600; }
+    .lbl   { font-size: 15px; font-weight: 600; }
+    .val   { font-size: 16px; }
+    .ph    { font-size: 16px; fill: #6e7781; }
+    .small { font-size: 14px; }
+    .note  { font-size: 14px; fill: #00695c; font-weight: 600; }
+    .arrow { stroke: #00695c; stroke-width: 2; fill: none; }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="860" height="430"/>
+
+  <text class="t h" x="24" y="34">Create a new repository</text>
+  <line x1="24" y1="50" x2="560" y2="50" stroke="#d0d7de" stroke-width="1.5"/>
+
+  <text class="t lbl" x="24" y="80">Owner</text>
+  <rect class="field" x="24" y="90" width="180" height="40" rx="6"/>
+  <text class="t val" x="38" y="116">your-username</text>
+  <path d="M176 106 l8 9 8 -9" stroke="#1f2328" stroke-width="2" fill="none"/>
+
+  <text class="t val muted" x="214" y="116">/</text>
+
+  <text class="t lbl" x="236" y="80">Repository name</text>
+  <rect class="field" x="236" y="90" width="240" height="40" rx="6"/>
+  <text class="t val" x="250" y="116">my-docs</text>
+
+  <path class="arrow" d="M488 110 C 520 110, 530 100, 560 100"/>
+  <path d="M560 100 l-11 -5 l0 10 z" fill="#00695c"/>
+  <text class="t note" x="570" y="96">Lowercase, no spaces.</text>
+  <text class="t note" x="570" y="118">It becomes part of the</text>
+  <text class="t note" x="570" y="140">web address.</text>
+
+  <circle cx="34" cy="182" r="9" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
+  <circle cx="34" cy="182" r="4.5" fill="#0969da"/>
+  <text class="t val" x="52" y="188">Public</text>
+  <circle cx="146" cy="182" r="9" fill="#ffffff" stroke="#8c959f" stroke-width="2"/>
+  <text class="t val" x="164" y="188">Private</text>
+
+  <path class="arrow" d="M230 182 C 400 182, 420 176, 560 176"/>
+  <path d="M560 176 l-11 -5 l0 10 z" fill="#00695c"/>
+  <text class="t note" x="570" y="181">Public: free hosting.</text>
+
+  <text class="t lbl" x="24" y="240">Initialize this repository with:</text>
+
+  <rect x="25" y="256" width="18" height="18" rx="4" fill="#ffffff" stroke="#8c959f" stroke-width="2"/>
+  <text class="t val" x="52" y="271">Add a README file</text>
+
+  <rect x="25" y="292" width="18" height="18" rx="4" fill="#ffffff" stroke="#8c959f" stroke-width="2"/>
+  <text class="t val" x="52" y="307">Add .gitignore</text>
+
+  <rect x="25" y="328" width="18" height="18" rx="4" fill="#ffffff" stroke="#8c959f" stroke-width="2"/>
+  <text class="t val" x="52" y="343">Choose a license</text>
+
+  <path class="arrow" d="M250 300 C 400 300, 420 296, 560 296"/>
+  <path d="M560 296 l-11 -5 l0 10 z" fill="#00695c"/>
+  <text class="t note" x="570" y="280">Leave all three empty.</text>
+  <text class="t note" x="570" y="302">You already have files,</text>
+  <text class="t note" x="570" y="324">and starting the repository</text>
+  <text class="t note" x="570" y="346">empty avoids a clash.</text>
+
+  <rect class="btn" x="24" y="370" width="176" height="40" rx="6"/>
+  <text class="t val btntext" x="112" y="396" text-anchor="middle">Create repository</text>
+
+  <text class="t small muted" x="228" y="396">Diagram, not a screenshot.</text>
+</svg>

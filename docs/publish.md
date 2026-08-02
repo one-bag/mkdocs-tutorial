@@ -109,6 +109,8 @@ This is done once, in the browser.
 4. Under **Build and deployment**, open the **Source** dropdown and choose
    **GitHub Actions**.
 
+![Diagram of the GitHub Pages settings, with the Source dropdown under Build and deployment set to GitHub Actions](assets/github-pages-source.svg)
+
 There is no save button. The choice applies immediately.
 
 !!! danger "The most common mistake"
@@ -129,7 +131,9 @@ git push
 ```
 
 Now click the **Actions** tab of your repository. A run appears with a yellow
-dot, meaning it is working. It takes about a minute.
+dot, meaning it is working. It takes about a minute, and then looks like this:
+
+![The Actions tab of a GitHub repository, listing workflow runs named Publish documentation, each with a green tick and the time it took](assets/github-actions-success.png)
 
 * **Green tick:** done. Your site is live.
 * **Red cross:** click the run, then the failed step, and read the last lines

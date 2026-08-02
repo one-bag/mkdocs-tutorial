@@ -119,8 +119,25 @@ The columns do not need to line up in your text file. Only the pipes matter.
 
 ### Coloured boxes
 
-These are called admonitions, and they come from the Material theme. They are
-the fastest way to make a page look organised.
+These are called admonitions, and they are the fastest way to make a page look
+organised.
+
+!!! warning "Switch these two on first"
+    Unlike everything above, coloured boxes are not part of plain Markdown. Try
+    one right now and the page will show your text exactly as you typed it,
+    `!!!` and all.
+
+    Open `mkdocs.yml`, add these three lines at the bottom, and save:
+
+    ```yaml title="mkdocs.yml"
+    markdown_extensions:
+      - admonition
+      - pymdownx.details
+    ```
+
+    [Step 5](configuration.md) explains what that section is. The boxes work
+    straight away, and they get their colours once you switch to the Material
+    theme in [step 6](theme.md).
 
 ```markdown
 !!! note "Optional title"
@@ -179,13 +196,19 @@ site_name: My documentation
 
 nav:
   - Home: index.md
-  - Installation: install.md
-  - How to use it: usage.md
+  - Getting started: install.md
 ```
 
 The part before the colon is the label shown in the menu. The part after it is
-the file. They are independent, so a file called `install.md` can appear as
-"Getting started" if you prefer.
+the file. They are independent, which is why `install.md` can appear as
+"Getting started".
+
+!!! warning "Only list files that exist"
+    Add a line for a file you have not created yet and MkDocs prints
+    `A reference to 'usage.md' is included in the 'nav' configuration, which is
+    not found in the documentation files`. The site still builds, so it is a
+    warning rather than a disaster, but it will keep nagging you until the file
+    exists or the line goes.
 
 !!! warning "Once you write `nav`, it is the only source of truth"
     A page missing from `nav` still gets built, but no link points to it, so

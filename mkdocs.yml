@@ -93,6 +93,8 @@ markdown_extensions:
 
 nav:
   - Start here: index.md
+  # Quoted because the label itself contains a colon.
+  - "Shortcut: no installation": quick-start.md
   - 1. What is MkDocs: what-is-mkdocs.md
   - 2. Install the tools: install.md
   - 3. Build your first site: first-site.md

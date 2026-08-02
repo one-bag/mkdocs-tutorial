@@ -173,6 +173,40 @@ If you do, you are done here.
 
     More cases are collected on the [Troubleshooting](troubleshooting.md) page.
 
+## Step 8: get a text editor
+
+You are about to spend your time editing text files, so the tool you edit them
+with matters more than you would think.
+
+**Install [Visual Studio Code](https://code.visualstudio.com/).** It is free,
+it runs on Windows, macOS and Linux, and it opens a whole folder at once, which
+means your pages and your `mkdocs.yml` are one click apart. It also colours
+Markdown and YAML, so a missing quote is visible instead of mysterious.
+
+Once installed, open your project with **File > Open Folder** and choose
+`my-docs`.
+
+!!! danger "Do not use a word processor"
+    Microsoft Word, Google Docs and Pages cannot save these files at all. They
+    will offer to save `.docx`, and nothing will work.
+
+    macOS TextEdit is the trap in the middle: it looks like a text editor but
+    starts in rich text mode, and it turns your straight quotes into curly
+    ones. Curly quotes look identical to a human and break every code sample
+    and every YAML value that contains them. If you must use it, choose
+    **Format > Make Plain Text**, and turn off smart quotes under
+    **Edit > Substitutions**.
+
+    Windows Notepad is plain enough to work, it just gives you no help.
+
+??? tip "Two extensions worth adding, once you are comfortable"
+    In VS Code, open the Extensions panel on the left and search for:
+
+    - **YAML** by Red Hat, which catches mistakes in `mkdocs.yml` as you type.
+    - **Markdown All in One**, for shortcuts and a live preview.
+
+    Neither is required. The tutorial works without them.
+
 ---
 
 Next: [build your first site](first-site.md).
