@@ -151,6 +151,27 @@ extra_css:
 Right click anything and choose **Inspect** to find its class name. Details in
 [step 10](custom-css.md).
 
+## Publishing a Jupyter notebook
+
+```bash
+pip install mkdocs-jupyter
+```
+
+```yaml title="mkdocs.yml"
+plugins:
+  - search
+  - mkdocs-jupyter:
+      include: ["*.ipynb"]     # leave the Markdown pages alone
+      execute: false           # use the outputs saved in the notebook
+      include_source: true     # publish the .ipynb too, link to it yourself
+
+nav:
+  - Analysis: analysis.ipynb   # the file lives in docs/, like any page
+```
+
+Run the notebook and save it before committing: with `execute: false` the page
+shows the outputs stored in the file. Details in [step 11](notebooks.md).
+
 ## A minimal `mkdocs.yml`
 
 ```yaml title="mkdocs.yml"
@@ -191,6 +212,7 @@ my-docs/
 ├── requirements.txt       Which versions to install
 ├── docs/                  Your content, all of it
 │   ├── index.md
+│   ├── analysis.ipynb     Notebooks go here too
 │   ├── assets/            Images, logo, favicon
 │   └── stylesheets/
 │       └── extra.css      Your own CSS, if you add any

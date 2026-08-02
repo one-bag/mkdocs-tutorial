@@ -274,5 +274,4 @@ Material already has a setting or a plugin for.
 
 ---
 
-That is the end of the tutorial. The [Cheat sheet](cheatsheet.md) has the
-commands, and [Troubleshooting](troubleshooting.md) has the errors.
+Next, and last: [add Jupyter notebooks](notebooks.md), if you have any.

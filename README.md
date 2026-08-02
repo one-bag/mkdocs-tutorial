@@ -21,6 +21,7 @@ the real thing.
 8. Publishing for free with GitHub Pages and GitHub Actions
 9. Adding plugins, and pinning them so the published build keeps working
 10. Customising the theme with your own CSS, starting from no CSS at all
+11. Publishing Jupyter notebooks as pages, with their outputs and charts
 
 Plus a troubleshooting page with the errors people actually hit, and a one page
 cheat sheet.

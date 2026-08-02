@@ -67,9 +67,12 @@ Read the pages in order. Each one builds on the previous one.
 * :material-palette-swatch: **[10. Customise with CSS](custom-css.md)**
   Your exact colours, and the last bits the theme does not cover.
 
+* :material-notebook: **[11. Add Jupyter notebooks](notebooks.md)**
+  Publish `.ipynb` files as pages, outputs and charts included.
+
 </div>
 
-Steps 1 to 8 take you from nothing to a published site. Steps 9 and 10 are
+Steps 1 to 8 take you from nothing to a published site. Steps 9 to 11 are
 optional extras. Two reference pages are there for later:
 [Troubleshooting](troubleshooting.md) for when something breaks, and the
 [Cheat sheet](cheatsheet.md) for when you just need to remember a command.

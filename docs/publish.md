@@ -187,10 +187,10 @@ You now have a documentation website that is written in plain text, versioned,
 searchable, readable on a phone, published for free and updated by saving a
 file.
 
-Everything after this point is optional. Carry on to
-[add plugins](plugins.md) for extras such as "last updated" dates on every
-page, or to [customise with CSS](custom-css.md) if the theme settings do not
-quite give you the colours you want.
+Everything after this point is optional: [plugins](plugins.md) for extras such
+as "last updated" dates, [CSS](custom-css.md) if the theme settings do not
+quite give you the colours you want, and
+[Jupyter notebooks](notebooks.md) if your work lives in them.
 
 Keep the [Cheat sheet](cheatsheet.md) open for the commands, and come back to
 [Troubleshooting](troubleshooting.md) when something misbehaves.

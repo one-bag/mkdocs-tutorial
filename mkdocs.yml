@@ -62,7 +62,7 @@ plugins:
   - mkdocs-jupyter:
       include: ["*.ipynb"]     # leave the Markdown pages to MkDocs itself
       execute: false           # use the outputs saved in the notebook
-      include_source: true     # offer the .ipynb as a download
+      include_source: true     # publish the .ipynb next to its page
       ignore_h1_titles: false
 
 markdown_extensions:

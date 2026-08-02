@@ -132,7 +132,7 @@ plugins:
 | `execute` | `false` | Run the notebooks at build time |
 | `execute_ignore` | empty | Notebooks to leave alone when `execute` is on |
 | `allow_errors` | `true` | With `execute`, whether a failing cell is tolerated |
-| `include_source` | `false` | Add a download link for the original `.ipynb` |
+| `include_source` | `false` | Copy the original `.ipynb` into the built site, so it can be downloaded |
 | `ignore_h1_titles` | `false` | Use the `nav` label as the title instead of the notebook's first heading |
 | `no_input` | `false` | Show only the outputs, hiding all the code |
 | `kernel_name` | automatic | Force a particular kernel when executing |
@@ -141,6 +141,20 @@ plugins:
 `no_input: true` is worth remembering. It turns a notebook into a clean report
 of results with no code in sight, which is often what a non technical reader
 wants.
+
+!!! warning "`include_source` does not add a button"
+    It is easy to misread. The option copies the `.ipynb` into the built site
+    next to its page, and stops there. No download link appears anywhere: if
+    you want one, you write it yourself.
+
+    The copied file sits at the page address followed by the file name, so for
+    the example on this site that is
+    [example-notebook.ipynb](https://one-bag.github.io/mkdocs-tutorial/example-notebook/example-notebook.ipynb).
+    Add a Markdown cell at the top of your notebook with a link of that shape
+    and readers get their download.
+
+    Without the option the file is not published at all, and any link to it is
+    a dead end.
 
 ## Titles
 
@@ -206,6 +220,20 @@ and you can check it by switching this site to dark mode.
     The notebook was saved with its outputs cleared, so there is nothing to
     display. Run it again, save, and commit. Some editors and some `nbstripout`
     setups clear outputs on save, which is exactly the wrong behaviour here.
+
+??? failure "`Alternative text is missing on 1 image(s)`"
+    This comes from the tool that converts the notebook, not from MkDocs, and
+    it means a chart has no text description for screen readers. It is printed
+    on every build and it does not stop one, not even with `--strict`. There is
+    no way to silence it from inside the notebook. Ignore it, and where the
+    chart carries information that the surrounding text does not, describe it
+    in a Markdown cell underneath.
+
+??? failure "`has no git logs, using current timestamp`"
+    Only relevant if you also use the "last updated" plugin from
+    [step 9](plugins.md#the-worked-example-last-updated-dates). The notebook has
+    not been committed yet, so there is no history to read a date from. With
+    `--strict` this stops the build. Commit the notebook and it goes away.
 
 ??? failure "A `.cache` folder appeared in my project"
     That is this plugin storing rendered notebooks so later builds are faster.

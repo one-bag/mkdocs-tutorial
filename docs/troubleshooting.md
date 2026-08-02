@@ -148,6 +148,14 @@ CSS problems have their own section at the end of
 path in `extra_css` that does not start inside `docs`, a browser showing a
 cached copy, and a theme rule that is more specific than yours.
 
+## Jupyter notebooks
+
+Notebook problems are collected at the end of
+[step 11](notebooks.md#when-it-does-not-work). The usual ones are a notebook
+missing from `nav`, Markdown pages rendering oddly because the plugin's
+`include` was left at its default, and charts that vanish because the notebook
+was saved with its outputs cleared.
+
 ## Still stuck
 
 1. Read the last five lines of the error. The answer is usually in there, in
