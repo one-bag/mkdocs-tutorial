@@ -1,0 +1,4 @@
+# Everything this documentation site needs to build.
+# Install it all with:  pip install -r requirements.txt
+mkdocs==1.6.1
+mkdocs-material==9.7.7

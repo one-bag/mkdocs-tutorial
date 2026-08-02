@@ -1,0 +1,93 @@
+site_name: MkDocs Tutorial
+site_description: A friendly, step by step guide to building and publishing a documentation website with MkDocs, even if you have never used GitHub.
+site_author: one-bag
+site_url: https://one-bag.github.io/mkdocs-tutorial/
+
+repo_url: https://github.com/one-bag/mkdocs-tutorial
+repo_name: one-bag/mkdocs-tutorial
+edit_uri: edit/main/docs/
+
+copyright: Released under the MIT License
+
+# Ask MkDocs to complain about broken links, missing pages and bad anchors.
+# Combined with "mkdocs build --strict", these warnings become build errors.
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+theme:
+  name: material
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+    - toc.follow
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Start here: index.md
+  - 1. What is MkDocs: what-is-mkdocs.md
+  - 2. Install the tools: install.md
+  - 3. Build your first site: first-site.md
+  - 4. Write your pages: writing-pages.md
+  - 5. Configure the site: configuration.md
+  - 6. Make it look good: theme.md
+  - 7. Put it on GitHub: github-basics.md
+  - 8. Publish it online: publish.md
+  - Troubleshooting: troubleshooting.md
+  - Cheat sheet: cheatsheet.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/one-bag
+      name: one-bag on GitHub
