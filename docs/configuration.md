@@ -85,6 +85,18 @@ set, every page also gets an "edit this page" pencil that takes readers
 straight to the file on GitHub. It is the cheapest way to get corrections from
 your readers.
 
+### plugins
+
+```yaml
+plugins:
+  - search
+```
+
+Programs that take part in the build and add features. If you leave this out
+entirely, MkDocs uses `search` on its own, which is why your site has a search
+box without you asking for one. Writing the list yourself replaces that
+default, so `search` has to stay on it. Covered in [step 9](plugins.md).
+
 ### markdown_extensions
 
 ```yaml

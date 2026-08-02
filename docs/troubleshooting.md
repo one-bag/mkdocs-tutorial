@@ -133,6 +133,14 @@ Find your error message below. They are grouped by where the problem happens.
     green, your browser is showing a cached copy: reload with ++ctrl+shift+r++,
     or ++cmd+shift+r++ on macOS.
 
+## Plugins
+
+Plugin problems have their own section at the end of
+[step 9](plugins.md#when-something-breaks). The two that catch most people:
+the search box vanishing because `search` was left out of the `plugins` list,
+and a build that works locally but fails on GitHub because the plugin is
+missing from `requirements.txt`.
+
 ## Still stuck
 
 1. Read the last five lines of the error. The answer is usually in there, in

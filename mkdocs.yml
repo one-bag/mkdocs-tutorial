@@ -48,6 +48,16 @@ theme:
     - search.highlight
     - toc.follow
 
+plugins:
+  # "search" is on by default, but writing this list replaces the defaults,
+  # so it has to be repeated here or the search box disappears.
+  - search
+  # Shows when each page was last changed, taken from the git history.
+  - git-revision-date-localized:
+      enable_creation_date: false
+      type: date
+      fallback_to_build_date: true
+
 markdown_extensions:
   - abbr
   - admonition
@@ -84,6 +94,7 @@ nav:
   - 6. Make it look good: theme.md
   - 7. Put it on GitHub: github-basics.md
   - 8. Publish it online: publish.md
+  - 9. Add plugins: plugins.md
   - Troubleshooting: troubleshooting.md
   - Cheat sheet: cheatsheet.md
 

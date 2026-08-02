@@ -61,11 +61,15 @@ Read the pages in order. Each one builds on the previous one.
 * :material-web: **[8. Publish it online](publish.md)**
   Turn on GitHub Pages and get your public address.
 
+* :material-puzzle: **[9. Add plugins](plugins.md)**
+  Extra features, added one line at a time.
+
 </div>
 
-Two reference pages are there for later: [Troubleshooting](troubleshooting.md)
-for when something breaks, and the [Cheat sheet](cheatsheet.md) for when you
-just need to remember a command.
+Steps 1 to 8 take you from nothing to a published site. Step 9 is optional
+extras. Two reference pages are there for later:
+[Troubleshooting](troubleshooting.md) for when something breaks, and the
+[Cheat sheet](cheatsheet.md) for when you just need to remember a command.
 
 ## How to read the code boxes
 

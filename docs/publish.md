@@ -187,5 +187,9 @@ You now have a documentation website that is written in plain text, versioned,
 searchable, readable on a phone, published for free and updated by saving a
 file.
 
+Everything after this point is optional. If you want extras such as "last
+updated" dates on every page, or images that enlarge when clicked, carry on to
+[add plugins](plugins.md).
+
 Keep the [Cheat sheet](cheatsheet.md) open for the commands, and come back to
 [Troubleshooting](troubleshooting.md) when something misbehaves.

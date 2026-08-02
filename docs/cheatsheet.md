@@ -97,6 +97,31 @@ Types available: `note`, `abstract`, `info`, `tip`, `success`, `question`,
 `warning`, `failure`, `danger`, `bug`, `example`, `quote`. Start it with `???`
 instead of `!!!` to make it foldable.
 
+## Adding a plugin
+
+Four steps, in this order:
+
+```bash
+pip install mkdocs-glightbox           # 1. install it
+```
+
+```yaml title="mkdocs.yml"
+plugins:                               # 2. switch it on
+  - search                             #    keep this line or search breaks
+  - glightbox
+```
+
+```bash
+mkdocs serve                           # 3. check it locally
+```
+
+```text title="requirements.txt"
+mkdocs-glightbox==0.5.2                # 4. pin it, or GitHub cannot build
+```
+
+The pip package name and the name you write in `mkdocs.yml` are usually
+different. Details in [step 9](plugins.md).
+
 ## A minimal `mkdocs.yml`
 
 ```yaml title="mkdocs.yml"
@@ -143,7 +168,8 @@ my-docs/
 
 ## The publishing checklist
 
-- [ ] `requirements.txt` exists, with pinned versions
+- [ ] `requirements.txt` exists, with pinned versions of MkDocs, the theme and
+      every plugin you use
 - [ ] `.github/workflows/deploy.yml` exists
 - [ ] `.gitignore` contains `site/`
 - [ ] **Settings > Pages > Source** is set to **GitHub Actions**

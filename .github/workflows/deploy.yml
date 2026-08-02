@@ -26,6 +26,10 @@ jobs:
     steps:
       - name: Get the files
         uses: actions/checkout@v7
+        with:
+          # The whole history, so the plugin that shows "last updated" dates
+          # can read when each page was really changed.
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v7
