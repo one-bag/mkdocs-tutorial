@@ -1,5 +1,6 @@
 # The folder MkDocs generates. It is rebuilt every time, so it never goes into git.
 site/
+.cache/
 
 # Python virtual environments
 .venv/

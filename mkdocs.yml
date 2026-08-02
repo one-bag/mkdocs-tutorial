@@ -58,6 +58,12 @@ plugins:
       enable_creation_date: false
       type: date
       fallback_to_build_date: true
+  # Renders .ipynb files as ordinary pages of the site.
+  - mkdocs-jupyter:
+      include: ["*.ipynb"]     # leave the Markdown pages to MkDocs itself
+      execute: false           # use the outputs saved in the notebook
+      include_source: true     # offer the .ipynb as a download
+      ignore_h1_titles: false
 
 markdown_extensions:
   - abbr
@@ -97,6 +103,8 @@ nav:
   - 8. Publish it online: publish.md
   - 9. Add plugins: plugins.md
   - 10. Customise with CSS: custom-css.md
+  - 11. Add Jupyter notebooks: notebooks.md
+  - Example notebook: example-notebook.ipynb
   - Troubleshooting: troubleshooting.md
   - Cheat sheet: cheatsheet.md
 
