@@ -1,0 +1,15 @@
+# The folder MkDocs generates. It is rebuilt every time, so it never goes into git.
+site/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Editor and operating system leftovers
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
