@@ -271,5 +271,6 @@ and you can check it by switching this site to dark mode.
 
 ---
 
-That is the end of the tutorial. The [Cheat sheet](cheatsheet.md) has the
-commands and [Troubleshooting](troubleshooting.md) has the errors.
+That is the end of the steps. If what you are about to publish is itself a
+tutorial, there is one more page worth reading:
+[writing a tutorial of your own](writing-a-tutorial.md).

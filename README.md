@@ -29,8 +29,9 @@ browser. No Python, no terminal.
 11. Publishing Jupyter notebooks as pages, with their outputs and charts
 
 Plus a browser-only shortcut for people who would rather not install anything,
-a troubleshooting page with the errors people actually hit, and a one page
-cheat sheet.
+a page on [writing a tutorial](https://one-bag.github.io/mkdocs-tutorial/writing-a-tutorial/)
+drawn from the mistakes made in this one, a troubleshooting page with the errors
+people actually hit, and a one page cheat sheet.
 
 ## Run this site on your own computer
 

@@ -95,6 +95,12 @@ optional extras. Two reference pages are there for later:
 [Troubleshooting](troubleshooting.md) for when something breaks, and the
 [Cheat sheet](cheatsheet.md) for when you just need to remember a command.
 
+!!! note "If what you are publishing is itself a tutorial"
+    [Writing a tutorial of your own](writing-a-tutorial.md) is about the
+    writing rather than the tool: how to order the steps so nothing is
+    demonstrated before it works, and how to test a tutorial instead of
+    rereading it. It is drawn entirely from mistakes made in this one.
+
 ## How to read the code boxes
 
 Boxes like this one contain commands you type into a terminal. Type or paste
