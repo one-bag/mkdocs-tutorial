@@ -152,6 +152,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.tilde
 
 nav:
   - Home: index.md

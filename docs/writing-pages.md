@@ -28,6 +28,11 @@ and everything below it turns into the table of contents on the right.
 | `` `some_command` `` | `some_command` |
 | `~~no longer true~~` | ~~no longer true~~ |
 
+Strikethrough is the one exception in that table: it only works once
+`pymdownx.tilde` is listed under `markdown_extensions` in `mkdocs.yml`. It is
+already in the example configuration you will copy in
+[step 5](configuration.md#a-complete-file-to-copy).
+
 ### Lists
 
 ```markdown

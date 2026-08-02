@@ -26,7 +26,7 @@ Find your error message below. They are grouped by where the problem happens.
     run from the folder that contains `mkdocs.yml`. Check with `ls` on macOS or
     Linux, `dir` on Windows.
 
-??? failure "`[Errno 48] Address already in use`"
+??? failure "`Address already in use`"
     Another `mkdocs serve` is still running, probably in a terminal window you
     forgot. Either press ++ctrl+c++ there, or use a different port:
 
