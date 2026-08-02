@@ -95,6 +95,30 @@ folding menus.
     even `mkdocs build --strict`. So if a feature you switched on has no
     effect, suspect the spelling before you suspect anything else.
 
+## Write in a language other than English
+
+The theme has words of its own: "Search", "Next", "Table of contents", "Last
+update", the tooltip on the copy button. By default they are in English, even
+when every word you wrote is not. One line fixes all of them at once:
+
+```yaml title="mkdocs.yml"
+theme:
+  name: material
+  language: es
+```
+
+Use the two letter code for your language: `es`, `fr`, `de`, `it`, `pt`, `ca`,
+`eu`, `gl`, `nl`, `pl`, `ru`, `zh`, `ja`. Material ships 69 of them.
+
+With `language: es` the search box says "Búsqueda" instead of "Search", and the
+rest of the theme follows.
+
+!!! tip "It also improves the search"
+    Splitting text into words, reducing them to their root and deciding which
+    small words to ignore all depend on the language. Setting `language` loads
+    the right rules for yours, so the search behaves sensibly instead of
+    treating your pages as English.
+
 ## Add a logo and a favicon
 
 Put your image files in `docs/assets/` and point at them:

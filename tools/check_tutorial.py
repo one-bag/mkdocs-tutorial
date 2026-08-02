@@ -125,16 +125,23 @@ def notebook_link_problems():
     problems = []
     for path in sorted(DOCS.rglob("*.ipynb")):
         cells = json.loads(path.read_text()).get("cells", [])
-        for index, cell in enumerate(cells):
-            if cell.get("cell_type") != "markdown":
-                continue
-            source = "".join(cell.get("source", []))
-            for text, target in re.findall(r"\[([^\]]+)\]\(([^)]+)\)", source):
-                if re.search(r"\.md(#|$)", target):
-                    problems.append(
-                        f"{path.relative_to(ROOT)} cell {index}: "
-                        f"[{text}]({target}) will not be rewritten, "
-                        f"use a relative address such as ../{target[:-3]}/")
+        problems += notebook_link_issues(cells, path.relative_to(ROOT))
+    return problems
+
+
+def notebook_link_issues(cells, label):
+    """The part of the notebook check that can be tested on its own."""
+    problems = []
+    for index, cell in enumerate(cells):
+        if cell.get("cell_type") != "markdown":
+            continue
+        source = "".join(cell.get("source", []))
+        for text, target in re.findall(r"\[([^\]]+)\]\(([^)]+)\)", source):
+            if re.search(r"\.md(#|$)", target):
+                problems.append(
+                    f"{label} cell {index}: [{text}]({target}) will not be "
+                    f"rewritten, use a relative address such as "
+                    f"../{target[:-3]}/")
     return problems
 
 
@@ -203,7 +210,62 @@ def compare(snippet, shown_exts, reader_exts):
     return "; ".join(reasons) if reasons else None
 
 
+def self_test():
+    """Prove the checks still detect the bugs they were written for.
+
+    A checker nobody has tested is worse than no checker, because it gives
+    permission to stop looking. Each case below is a bug that really shipped on
+    this site. If any of them stops being caught, this fails.
+    """
+    cases = []
+
+    def case(name, got, want=True):
+        cases.append((name, bool(got) == want))
+
+    # 1. Coloured boxes taught before the extension exists. Shipped in step 4.
+    case("admonition without its extension",
+         compare('!!! note "Title"\n    Body.\n', ["admonition"], BUILTINS))
+    # 2. Strikethrough taught before pymdownx.tilde. Shipped in step 4.
+    case("strikethrough without its extension",
+         compare("~~gone~~", ["pymdownx.tilde"], BUILTINS))
+    # 3. Foldable boxes without pymdownx.details.
+    case("details without its extension",
+         compare('??? tip "T"\n    Body.\n', ["admonition", "pymdownx.details"],
+                 BUILTINS))
+    # 4. A .md link inside a notebook. Shipped in the example notebook.
+    case("md link inside a notebook",
+         notebook_link_issues(
+             [{"cell_type": "markdown", "source": ["See [this](notebooks.md)."]}],
+             "fixture"))
+    # 5. The same link written correctly must not be reported.
+    case("relative link inside a notebook",
+         notebook_link_issues(
+             [{"cell_type": "markdown", "source": ["See [this](../notebooks/)."]}],
+             "fixture"),
+         want=False)
+    # 6. Something that is fine must stay fine, or the checker is just noisy.
+    case("plain Markdown with no extensions needed",
+         compare("# Title\n\n**bold** and a [link](x.md).\n", BUILTINS, BUILTINS),
+         want=False)
+
+    print("Self-test: does the checker still catch the bugs it was written for?\n")
+    for name, passed in cases:
+        print(f"  {'ok  ' if passed else 'FAIL'} {name}")
+    failed = [n for n, p in cases if not p]
+    print()
+    if failed:
+        print(f"{len(failed)} self-test(s) failed. The checker cannot be "
+              "trusted until they pass.")
+        return 1
+    print(f"All {len(cases)} self-tests pass, so a green run below means "
+          "something.")
+    return 0
+
+
 def main():
+    if "--self-test" in sys.argv:
+        return self_test()
+
     site = site_extensions()
     step5 = step5_extensions()
     timeline_problems, step5_problems = [], []

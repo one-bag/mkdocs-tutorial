@@ -88,10 +88,14 @@ Read the pages in order. Each one builds on the previous one.
 * :material-notebook: **[11. Add Jupyter notebooks](notebooks.md)**
   Publish `.ipynb` files as pages, outputs and charts included.
 
+* :material-account-group: **[12. Work with other people](teamwork.md)**
+  Branches and pull requests, so nothing goes live unchecked.
+
 </div>
 
-Steps 1 to 8 take you from nothing to a published site. Steps 9 to 11 are
-optional extras. Two reference pages are there for later:
+Steps 1 to 8 take you from nothing to a published site. Steps 9 to 12 are
+optional, and step 12 is the one to read the moment a second person is
+involved. Two reference pages are there for later:
 [Troubleshooting](troubleshooting.md) for when something breaks, and the
 [Cheat sheet](cheatsheet.md) for when you just need to remember a command.
 

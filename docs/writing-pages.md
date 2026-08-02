@@ -97,8 +97,33 @@ Put the file in `docs/assets/` and refer to it like this:
 ![Description of the image](assets/screenshot.png)
 ```
 
-The text in square brackets is what screen readers announce and what shows if
-the image fails to load. Write something meaningful there.
+The path starts from the page, so a page in a subfolder needs
+`../assets/screenshot.png`. Keeping every image in one `assets` folder saves
+you from thinking about it.
+
+**Always write the description.** The text in square brackets is what a screen
+reader announces and what appears if the image fails to load. "Screenshot" is
+not a description. "The Pages settings, with Source set to GitHub Actions" is.
+
+**Make it smaller if it is huge.** A phone camera photo is several thousand
+pixels wide and will make your page slow. Around 1200 pixels is plenty for a
+full width screenshot. You can also ask for a display width, which needs the
+`attr_list` extension from [step 5](configuration.md):
+
+```markdown
+![A small diagram](assets/diagram.png){ width="400" }
+```
+
+**Give screenshots a background colour.** This one catches everybody. An image
+is fixed at the moment you save it, so it will not follow your site's dark
+mode. A diagram saved with a transparent background and dark lines is invisible
+to anyone reading in the dark. Export with a solid white background instead: it
+looks like a white card on a dark page, which is not elegant but is legible.
+
+!!! tip "Where images come from matters less than you think"
+    A cropped screenshot beats a full screen every time, because the reader
+    does not have to hunt for the part you meant. Crop to the control you are
+    talking about, plus enough around it to be recognisable.
 
 ### Code
 
@@ -249,6 +274,41 @@ nav:
 
 The indentation is what creates the nesting, so keep it consistent. Four spaces
 under a menu label, six for the entries below it, as in the example above.
+
+## Renaming or deleting a page
+
+The file name becomes the web address, so renaming `install.md` to
+`getting-started.md` moves the page. Three things break at once, and only the
+first one tells you:
+
+1. **Links from your own pages.** `mkdocs build --strict` reports these, which
+   is one of the reasons to use it.
+2. **Links from `nav`.** You get the warning about a file that is not found.
+3. **Links from outside your site.** Bookmarks, chat messages, other people's
+   pages, search results. Nothing warns you, and nothing you can do will fix
+   them retrospectively.
+
+For a site nobody has linked to yet, rename freely. Once an address has been
+out in the world, treat it as a small promise.
+
+When you do have to move a published page, leave a forwarding address with the
+`redirects` plugin from [step 9](plugins.md):
+
+```yaml title="mkdocs.yml"
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+        install.md: getting-started.md
+```
+
+Anyone arriving at the old address lands on the new page instead of a 404. Keep
+the old entry even after you think everyone has updated their links, because
+they have not.
+
+Deleting a page is the same problem without a destination. If people may have
+linked to it, point the redirect at whatever replaced it, or at the page above
+it in the menu.
 
 ## Checklist for this step
 

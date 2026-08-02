@@ -27,6 +27,7 @@ browser. No Python, no terminal.
 9. Adding plugins, and pinning them so the published build keeps working
 10. Customising the theme with your own CSS, starting from no CSS at all
 11. Publishing Jupyter notebooks as pages, with their outputs and charts
+12. Branches and pull requests, so a change is checked before it goes live
 
 Plus a browser-only shortcut for people who would rather not install anything,
 a page on [writing a tutorial](https://one-bag.github.io/mkdocs-tutorial/writing-a-tutorial/)

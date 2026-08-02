@@ -174,6 +174,35 @@ This is the whole routine, forever:
 You never run `mkdocs build` for the public site, and you never touch the
 `site` folder. GitHub does that part.
 
+## Undoing something you published
+
+Everything you publish is a commit, and every commit can be undone. You will
+want this the first time you push a half finished page.
+
+**The page is wrong but you know the fix.** Fix it and push again. The site
+catches up in a minute. This is almost always the right answer.
+
+**You want the last change gone, right now.** Undo the most recent commit,
+keeping the history honest by adding a new commit that reverses it:
+
+```bash
+git revert HEAD
+git push
+```
+
+Git opens an editor for the message; save and close it and you are done. Do
+this rather than deleting commits: `revert` cannot lose anything, and it works
+even when the change is already published.
+
+**On GitHub, without the terminal.** Open the commit from the repository's
+**Commits** list, click the **...** menu at the top right of it and choose
+**Revert**. GitHub prepares the reversal for you.
+
+!!! tip "The site is never in a broken state for long"
+    A failed build does not replace the live site with an error page. The last
+    successful version stays up until a new one builds cleanly, so the worst a
+    broken push does is leave the site as it was.
+
 ## Optional: your own domain
 
 If you own a domain such as `docs.example.org`:

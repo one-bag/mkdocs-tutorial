@@ -1,9 +1,14 @@
 name: Publish documentation
 
-# Run this every time something is pushed to the main branch,
-# and also when you click "Run workflow" by hand in the Actions tab.
+# Run this every time something is pushed to the main branch, on every pull
+# request aimed at main, and when you click "Run workflow" in the Actions tab.
+# Pull requests are built and checked but not published: that way a change is
+# proved to work before anyone merges it.
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
   workflow_dispatch:
@@ -14,9 +19,10 @@ permissions:
   pages: write
   id-token: write
 
-# If two pushes happen close together, let the newest one finish.
+# If two pushes to the same branch happen close together, let them queue rather
+# than fight. Each pull request gets its own queue.
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -40,8 +46,14 @@ jobs:
       - name: Install MkDocs
         run: pip install -r requirements.txt
 
-      # Catches the tutorial promising something the reader's own setup will
-      # not do yet. See tools/check_tutorial.py for what that means.
+      # First prove the checker still detects the bugs it was written for.
+      # A checker nobody tests is worse than none: it licenses you to stop
+      # looking.
+      - name: Test the checker itself
+        run: python3 tools/check_tutorial.py --self-test
+
+      # Then use it. This catches the tutorial promising something the reader's
+      # own setup will not do yet. See tools/check_tutorial.py.
       - name: Check the tutorial against the reader's setup
         run: python3 tools/check_tutorial.py
 
@@ -59,6 +71,8 @@ jobs:
   deploy:
     name: Put it online
     needs: build
+    # Pull requests stop after the build above. Only main gets published.
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

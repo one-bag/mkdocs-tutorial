@@ -53,6 +53,16 @@ git commit -m "Describe what changed"
 git push
 ```
 
+Working on a branch instead, so nothing goes live until it is checked
+([step 12](teamwork.md)):
+
+```bash
+git switch -c my-change      # start a branch
+git add . && git commit -m "Describe what changed"
+git push -u origin my-change # the output links to the pull request
+git switch main && git pull  # after it is merged
+```
+
 ## Markdown
 
 | You write | You get |
