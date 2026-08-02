@@ -112,6 +112,32 @@ def taught_snippets(text):
         yield text[:m.start()].count("\n") + 1, m.group(1), "table row"
 
 
+def notebook_link_problems():
+    """Links inside notebooks are passed through untouched.
+
+    MkDocs rewrites `page.md` into a real address, but only on its own Markdown
+    pages. A notebook is rendered by the mkdocs-jupyter plugin, so a `.md` link
+    written in a notebook cell is published exactly as typed and 404s. Nothing
+    else catches this, not even `mkdocs build --strict`.
+    """
+    import json
+
+    problems = []
+    for path in sorted(DOCS.rglob("*.ipynb")):
+        cells = json.loads(path.read_text()).get("cells", [])
+        for index, cell in enumerate(cells):
+            if cell.get("cell_type") != "markdown":
+                continue
+            source = "".join(cell.get("source", []))
+            for text, target in re.findall(r"\[([^\]]+)\]\(([^)]+)\)", source):
+                if re.search(r"\.md(#|$)", target):
+                    problems.append(
+                        f"{path.relative_to(ROOT)} cell {index}: "
+                        f"[{text}]({target}) will not be rewritten, "
+                        f"use a relative address such as ../{target[:-3]}/")
+    return problems
+
+
 def python_version_problems():
     """The version the tutorial asks for must cover everything it installs.
 
@@ -196,11 +222,20 @@ def main():
                 step5_problems.append((where, reason))
 
     version_problems = python_version_problems()
+    notebook_problems = notebook_link_problems()
 
-    print(f"Checked {checked} taught snippets by rendering them, and the "
-          "stated Python version\nagainst every package the tutorial installs.\n")
+    print(f"Checked {checked} taught snippets by rendering them, the stated "
+          "Python version against\nevery package the tutorial installs, and "
+          "every link written inside a notebook.\n")
 
     ok = True
+    if notebook_problems:
+        ok = False
+        print(f"{len(notebook_problems)} link(s) inside a notebook that will "
+              "be published broken:")
+        for problem in notebook_problems:
+            print(f"  {problem}")
+        print()
     if version_problems:
         ok = False
         print(f"{len(version_problems)} problem(s) with the Python version "

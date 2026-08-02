@@ -72,8 +72,10 @@ reading. For every snippet the tutorial teaches, it renders it twice: once with
 this site's configuration, and once with the configuration the reader actually
 has at that point in the tutorial. Any difference is a promise the reader
 cannot keep. It also checks that everything still works with the complete
-`mkdocs.yml` handed out in step 5, and that the Python version the tutorial
-asks for is high enough for every package it later tells you to install.
+`mkdocs.yml` handed out in step 5, that the Python version the tutorial asks
+for is high enough for every package it later tells you to install, and that no
+notebook contains a `.md` link, which MkDocs does not rewrite inside notebooks
+and would publish broken.
 
 ```bash
 python3 tools/check_tutorial.py

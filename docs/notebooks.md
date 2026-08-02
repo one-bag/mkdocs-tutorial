@@ -156,6 +156,35 @@ wants.
     Without the option the file is not published at all, and any link to it is
     a dead end.
 
+## Links written inside a notebook
+
+This one is easy to get wrong and nothing warns you about it.
+
+On a normal Markdown page you link to another page by its file name, and MkDocs
+turns it into a real address for you:
+
+```markdown
+[the install page](install.md)
+```
+
+Inside a notebook that does not happen. The notebook is rendered by the plugin,
+not by MkDocs, so the link is published exactly as you typed it and leads
+nowhere. Write the address the reader's browser will actually need:
+
+```markdown
+[the install page](../install/)
+```
+
+The `../` is there because each page sits in its own folder. From
+`/example-notebook/`, going up one level and into `install` gives
+`/install/`.
+
+!!! warning "`mkdocs build --strict` does not catch this"
+    Link checking only covers the pages MkDocs renders itself. A broken link
+    in a notebook builds green and 404s for your readers. Click the links in
+    your notebooks once, on the published site, and you will never think about
+    it again.
+
 ## Titles
 
 By default the first `#` heading inside the notebook becomes the page title,
