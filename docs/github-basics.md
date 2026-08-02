@@ -199,6 +199,12 @@ touched it. If yours looks roughly like that, you are done here.
     git push -u origin main
     ```
 
+!!! success "Before you move on"
+    - Your repository page on GitHub lists `mkdocs.yml` and a `docs` folder.
+    - There is no `site` folder there. If there is, the `.gitignore` step above
+      was skipped.
+    - Clicking `docs`, then `index.md`, shows the text you wrote.
+
 ---
 
 Next: [publish it online](publish.md).

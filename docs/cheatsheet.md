@@ -182,6 +182,17 @@ nav:
 Run the notebook and save it before committing: with `execute: false` the page
 shows the outputs stored in the file. Details in [step 11](notebooks.md).
 
+## Writing in a language other than English
+
+```yaml title="mkdocs.yml"
+theme:
+  name: material
+  language: es       # translates Search, Next, Last update and the rest
+```
+
+Codes: `es`, `fr`, `de`, `it`, `pt`, `ca`, `eu`, `gl`, `ja`, and 60 more.
+Details in [step 6](theme.md#translate-the-theme-spanish-french-or-any-other-language).
+
 ## A minimal `mkdocs.yml`
 
 ```yaml title="mkdocs.yml"

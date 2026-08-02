@@ -216,6 +216,14 @@ If you own a domain such as `docs.example.org`:
 
 ## You are done
 
+!!! success "Check before you celebrate"
+    - The Actions tab shows a green tick, not a yellow dot and not a red cross.
+    - **Settings > Pages > Source** says **GitHub Actions**.
+    - Your `github.io` address opens your site, with the styling in place. Bare
+      unstyled text means `site_url` is wrong.
+    - `site_url` in `mkdocs.yml` matches that address exactly, trailing slash
+      included.
+
 You now have a documentation website that is written in plain text, versioned,
 searchable, readable on a phone, published for free and updated by saving a
 file.

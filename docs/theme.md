@@ -95,11 +95,14 @@ folding menus.
     even `mkdocs build --strict`. So if a feature you switched on has no
     effect, suspect the spelling before you suspect anything else.
 
-## Write in a language other than English
+## Translate the theme: Spanish, French, or any other language
+
+If you write in Spanish, French, German, Portuguese, Catalan, Basque, Galician,
+Japanese or anything else, this is the setting you are looking for.
 
 The theme has words of its own: "Search", "Next", "Table of contents", "Last
 update", the tooltip on the copy button. By default they are in English, even
-when every word you wrote is not. One line fixes all of them at once:
+when every word you wrote is not. One line translates all of them at once:
 
 ```yaml title="mkdocs.yml"
 theme:
@@ -111,7 +114,14 @@ Use the two letter code for your language: `es`, `fr`, `de`, `it`, `pt`, `ca`,
 `eu`, `gl`, `nl`, `pl`, `ru`, `zh`, `ja`. Material ships 69 of them.
 
 With `language: es` the search box says "Búsqueda" instead of "Search", and the
-rest of the theme follows.
+rest of the theme follows. Set it in Spanish, Español, whichever way you think
+of it: the code is what matters.
+
+!!! note "This translates the theme, not your writing"
+    A multilingual site, where the same page exists in two languages side by
+    side, is a different and much larger job. If you need one, look at the
+    `i18n` plugin. For a site written in one language that is not English, the
+    single `language` line is the whole answer.
 
 !!! tip "It also improves the search"
     Splitting text into words, reducing them to their root and deciding which
@@ -179,6 +189,11 @@ site without writing a single line of CSS.
     With `mkdocs serve` running, edit, save, look. If something breaks you know
     exactly which line did it. Changing five settings and then debugging is
     much harder.
+
+!!! success "Before you move on"
+    - The header is the colour you chose, not the default.
+    - The switch in the top right changes the site between light and dark.
+    - Code blocks have a copy button when you hover over them.
 
 ---
 

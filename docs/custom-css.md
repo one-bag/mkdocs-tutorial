@@ -272,6 +272,11 @@ extra_javascript:
 You will rarely want it. Almost everything people reach for JavaScript to do,
 Material already has a setting or a plugin for.
 
+!!! success "Before you move on"
+    - `extra_css` is in `mkdocs.yml` and points at `stylesheets/extra.css`.
+    - Your change is visible on the site.
+    - It still looks right after you flip the switch to the other colour mode.
+
 ---
 
 Next, and last: [add Jupyter notebooks](notebooks.md), if you have any.

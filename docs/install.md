@@ -213,6 +213,14 @@ Once installed, open your project with **File > Open Folder** and choose
 
     Neither is required. The tutorial works without them.
 
+!!! success "Before you move on"
+    - `mkdocs --version` prints a version number rather than an error.
+    - Your prompt starts with `(.venv)`.
+    - You have a text editor installed that is not a word processor.
+
+    If `mkdocs --version` fails, nothing on the next page will work. Go back to
+    step 7 above rather than pressing on.
+
 ---
 
 Next: [build your first site](first-site.md).

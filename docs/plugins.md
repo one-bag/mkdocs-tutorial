@@ -243,6 +243,12 @@ of them, because each is a separate project.
     Options go two spaces further in than the plugin name, and the plugin name
     needs a colon after it when it has options.
 
+!!! success "Before you move on"
+    - `search` is still the first entry under `plugins`, and the search box
+      still works.
+    - Every plugin you added is pinned in `requirements.txt`.
+    - The Actions tab shows a green tick after your last push.
+
 ---
 
 Next, and last: [customise with CSS](custom-css.md).

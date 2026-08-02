@@ -179,6 +179,13 @@ sitting right there in front of you.
     that lives for a month usually does. Merge early, and start each new branch
     from a fresh `git pull`.
 
+!!! success "Before you move on"
+    - The workflow has a `pull_request` trigger and the deploy job skips them.
+    - You have opened one pull request, seen its check turn green, merged it and
+      deleted the branch.
+    - Back on your own machine, `git switch main` then `git pull` brings the
+      merge down.
+
 ---
 
 Next: [writing a tutorial of your own](writing-a-tutorial.md), if what you are

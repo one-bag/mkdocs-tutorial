@@ -108,6 +108,13 @@ In practice you will rarely run `mkdocs build` yourself, because
 | `mkdocs serve` | Preview at `127.0.0.1:8000`, updates live | Every time you write |
 | `mkdocs build` | Writes the finished site into `site/` | Rarely, GitHub does it |
 
+!!! success "Before you move on"
+    - Your folder contains `mkdocs.yml` and a `docs` folder with `index.md`.
+    - `mkdocs serve` shows a website at `http://127.0.0.1:8000`.
+    - Editing `docs/index.md` and saving changes the page in the browser
+      without you reloading it.
+    - ++ctrl+c++ in the terminal stops the server.
+
 ---
 
 Next: [write your pages](writing-pages.md).

@@ -310,11 +310,13 @@ Deleting a page is the same problem without a destination. If people may have
 linked to it, point the redirect at whatever replaced it, or at the page above
 it in the menu.
 
-## Checklist for this step
-
-- [x] You can write headings, lists, links and code blocks.
-- [x] You added a second page and it appeared on the site.
-- [x] You wrote a `nav` section and the menu follows your order.
+!!! success "Before you move on"
+    - `mkdocs.yml` has a `markdown_extensions` section with the three lines
+      from the top of this page.
+    - Coloured boxes appear as boxes, and `~~text~~` comes out struck through.
+    - You added a second page and it appeared on the site.
+    - You wrote a `nav` section and the menu follows your order rather than the
+      alphabet.
 
 ---
 

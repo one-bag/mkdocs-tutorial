@@ -229,6 +229,16 @@ nav:
 The `nav` paths start inside `docs`, so it is `guide.md` and not
 `docs/guide.md`.
 
+!!! success "Before you move on"
+    - Your repository contains four files: `docs/index.md`, `mkdocs.yml`,
+      `requirements.txt` and `.github/workflows/deploy.yml`.
+    - **Settings > Pages > Source** says **GitHub Actions**.
+    - The Actions tab shows a green tick.
+    - Your `github.io` address opens your site.
+
+    If the address 404s while the tick is green, it is almost always the Source
+    setting. Check that one first.
+
 ## What to read next
 
 You now have the same thing the full tutorial builds, so any page here applies

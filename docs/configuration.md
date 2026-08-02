@@ -191,6 +191,13 @@ mkdocs build --strict
 Running it once before publishing saves you from putting a site online with
 dead links in it.
 
+!!! success "Before you move on"
+    - `mkdocs.yml` has at least `site_name` and a `nav` section.
+    - `mkdocs build --strict` finishes without printing a single warning.
+
+    That second one is the real checkpoint. From here on, treat a warning as
+    something to fix rather than something to scroll past.
+
 ---
 
 Next: [make it look good](theme.md).

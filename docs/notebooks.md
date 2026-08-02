@@ -269,6 +269,13 @@ and you can check it by switching this site to dark mode.
     It is harmless and it does not belong in git. Add `.cache/` to your
     `.gitignore`.
 
+!!! success "Before you move on"
+    - The notebook appears in the menu and its page shows the code, the printed
+      output and any charts.
+    - `mkdocs-jupyter` is pinned in `requirements.txt`.
+    - Every link you wrote inside the notebook actually goes somewhere, checked
+      on the published site rather than locally.
+
 ---
 
 Next: [work with other people](teamwork.md), for when someone else joins or you
