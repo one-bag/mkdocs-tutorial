@@ -23,17 +23,15 @@ theme:
   icon:
     repo: fontawesome/brands/github
   palette:
+    # No "primary" or "accent" here on purpose: the exact brand colour is set
+    # in docs/stylesheets/extra.css instead. See the "Customise with CSS" page.
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
-      accent: teal
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
-      accent: teal
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
@@ -47,6 +45,9 @@ theme:
     - search.suggest
     - search.highlight
     - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   # "search" is on by default, but writing this list replaces the defaults,
@@ -95,6 +96,7 @@ nav:
   - 7. Put it on GitHub: github-basics.md
   - 8. Publish it online: publish.md
   - 9. Add plugins: plugins.md
+  - 10. Customise with CSS: custom-css.md
   - Troubleshooting: troubleshooting.md
   - Cheat sheet: cheatsheet.md
 

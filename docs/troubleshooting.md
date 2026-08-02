@@ -141,6 +141,13 @@ the search box vanishing because `search` was left out of the `plugins` list,
 and a build that works locally but fails on GitHub because the plugin is
 missing from `requirements.txt`.
 
+## Custom CSS
+
+CSS problems have their own section at the end of
+[step 10](custom-css.md#when-your-css-does-nothing). The usual causes are a
+path in `extra_css` that does not start inside `docs`, a browser showing a
+cached copy, and a theme rule that is more specific than yours.
+
 ## Still stuck
 
 1. Read the last five lines of the error. The answer is usually in there, in

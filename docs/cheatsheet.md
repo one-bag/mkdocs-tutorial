@@ -122,6 +122,35 @@ mkdocs-glightbox==0.5.2                # 4. pin it, or GitHub cannot build
 The pip package name and the name you write in `mkdocs.yml` are usually
 different. Details in [step 9](plugins.md).
 
+## Adding your own CSS
+
+```text title="where the file goes"
+docs/stylesheets/extra.css
+```
+
+```yaml title="mkdocs.yml"
+extra_css:
+  - stylesheets/extra.css       # path starts inside docs/
+```
+
+```css title="docs/stylesheets/extra.css"
+[data-md-color-primary] {       /* your brand colour, both modes */
+  --md-primary-fg-color: #00695c;
+  --md-accent-fg-color:  #00897b;
+}
+
+[data-md-color-scheme="slate"][data-md-color-primary] {
+  --md-typeset-a-color: #4db6ac;   /* dark mode only */
+}
+
+.md-typeset h2 {                /* .md-typeset for anything in the page body */
+  border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+```
+
+Right click anything and choose **Inspect** to find its class name. Details in
+[step 10](custom-css.md).
+
 ## A minimal `mkdocs.yml`
 
 ```yaml title="mkdocs.yml"
@@ -162,7 +191,9 @@ my-docs/
 ├── requirements.txt       Which versions to install
 ├── docs/                  Your content, all of it
 │   ├── index.md
-│   └── assets/
+│   ├── assets/            Images, logo, favicon
+│   └── stylesheets/
+│       └── extra.css      Your own CSS, if you add any
 └── site/                  Generated. Never edited, never uploaded.
 ```
 

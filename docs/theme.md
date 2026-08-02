@@ -132,27 +132,18 @@ Note that `extra` is at the left margin, not indented under `theme`.
 
 ## Change something the theme does not offer
 
-For anything else, add your own CSS. Create `docs/stylesheets/extra.css`:
-
-```css title="docs/stylesheets/extra.css"
-:root {
-  --md-primary-fg-color: #005f73;
-}
-
-.md-typeset h1 {
-  font-weight: 700;
-}
-```
-
-And register it:
+Everything above is a setting. When you need something the settings do not
+cover, an exact colour from a brand guide for instance, you add your own
+stylesheet:
 
 ```yaml title="mkdocs.yml"
 extra_css:
   - stylesheets/extra.css
 ```
 
-That variable trick lets you set an exact brand colour rather than picking from
-the named list.
+That is all of [step 10](custom-css.md), which starts from scratch and assumes
+no CSS knowledge. Finish the tutorial first: you can publish a good looking
+site without writing a single line of CSS.
 
 !!! tip "Change one thing at a time"
     With `mkdocs serve` running, edit, save, look. If something breaks you know

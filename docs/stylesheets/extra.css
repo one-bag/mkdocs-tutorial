@@ -1,0 +1,31 @@
+/* Custom styles for this site.
+   Registered in mkdocs.yml under "extra_css". Every rule here is explained
+   in the tutorial, on the "Customise with CSS" page. */
+
+/* 1. An exact brand colour, instead of one of the theme's named colours.
+      These variables are read by the header, the buttons and the links.
+      The theme sets them on the <body> tag, so they have to be set there
+      too, which is what the attribute selector below does. */
+[data-md-color-primary] {
+  --md-primary-fg-color:        #00695c;
+  --md-primary-fg-color--light: #4a9d92;
+  --md-primary-fg-color--dark:  #004d40;
+  --md-accent-fg-color:         #00897b;
+}
+
+/* 2. The same colour is not readable in both modes. On the dark background
+      the links need a lighter tone, so they are overridden only there.
+      Two attributes, not one: the theme's own dark-mode rule uses two, and
+      a rule with fewer of them would lose. */
+[data-md-color-scheme="slate"][data-md-color-primary] {
+  --md-accent-fg-color:  #4db6ac;
+  --md-typeset-a-color:  #4db6ac;
+}
+
+/* 3. A thin rule under every section heading, to separate long pages.
+      The ".md-typeset" prefix is what makes this win over the theme's
+      own heading styles. */
+.md-typeset h2 {
+  border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.2rem;
+}

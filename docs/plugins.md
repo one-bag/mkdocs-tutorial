@@ -245,5 +245,4 @@ of them, because each is a separate project.
 
 ---
 
-That is the last step. Keep the [Cheat sheet](cheatsheet.md) nearby, and use
-[Troubleshooting](troubleshooting.md) when something misbehaves.
+Next, and last: [customise with CSS](custom-css.md).

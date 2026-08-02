@@ -64,10 +64,13 @@ Read the pages in order. Each one builds on the previous one.
 * :material-puzzle: **[9. Add plugins](plugins.md)**
   Extra features, added one line at a time.
 
+* :material-palette-swatch: **[10. Customise with CSS](custom-css.md)**
+  Your exact colours, and the last bits the theme does not cover.
+
 </div>
 
-Steps 1 to 8 take you from nothing to a published site. Step 9 is optional
-extras. Two reference pages are there for later:
+Steps 1 to 8 take you from nothing to a published site. Steps 9 and 10 are
+optional extras. Two reference pages are there for later:
 [Troubleshooting](troubleshooting.md) for when something breaks, and the
 [Cheat sheet](cheatsheet.md) for when you just need to remember a command.
 

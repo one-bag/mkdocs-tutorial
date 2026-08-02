@@ -20,6 +20,7 @@ the real thing.
 7. GitHub accounts, repositories and commits, from zero
 8. Publishing for free with GitHub Pages and GitHub Actions
 9. Adding plugins, and pinning them so the published build keeps working
+10. Customising the theme with your own CSS, starting from no CSS at all
 
 Plus a troubleshooting page with the errors people actually hit, and a one page
 cheat sheet.
